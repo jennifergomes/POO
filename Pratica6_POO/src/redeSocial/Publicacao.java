@@ -4,6 +4,8 @@ public class Publicacao {
 
     private String dataPublicacao, textoPublicacao, linkMidia;
 
+    public static double contadorPublicacao;
+
     public Publicacao(String dataPublicacao, String textoPublicacao, String linkMidia) {
         this.dataPublicacao = dataPublicacao;
         this.textoPublicacao = textoPublicacao;
@@ -14,9 +16,6 @@ public class Publicacao {
         return dataPublicacao;
     }
 
-    public void setDataPublicacao(String dataPublicacao) {
-        this.dataPublicacao = dataPublicacao;
-    }
 
     public String getTextoPublicacao() {
         return textoPublicacao;
@@ -32,5 +31,9 @@ public class Publicacao {
 
     public void setLinkMidia(String linkMidia) {
         this.linkMidia = linkMidia;
+    }
+
+    public double getContadorPublicacao() {
+        return contadorPublicacao;
     }
 }

@@ -1,8 +1,11 @@
 package redeSocial;
+import java.util.ArrayList;
 
 public class RedeSocial {
 
     private String dataCriacao, nomeUsuario, dataNascimento, senha;
+
+    ArrayList<Publicacao> publicacoes = new ArrayList<> ();
 
     public RedeSocial(String dataCriacao, String nomeUsuario, String dataNascimento, String senha) {
         this.dataCriacao = dataCriacao;
@@ -41,5 +44,23 @@ public class RedeSocial {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public void inserePublicacao(Publicacao publi){
+        this.publicacoes.add(publi);
+    }
+
+    public void imprimePublicacoes(){
+
+        int totalPublicacoes = this.publicacoes.size();
+
+        System.out.println("Total de publicações: " +totalPublicacoes);
+
+        for(Publicacao publi : this.publicacoes) {
+
+            System.out.println("Texto: " +publi.getTextoPublicacao() + " Data: " +publi.getDataPublicacao());
+
+        }
+
     }
 }
